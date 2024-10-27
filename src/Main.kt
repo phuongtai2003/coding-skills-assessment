@@ -1,9 +1,6 @@
 // Total value of products in stock
 fun totalValue(products: List<Product>): Double {
-    var total = 0.0
-    for (product in products) {
-        total += product.price * product.quantity
-    }
+    val total = products.sumOf { it.price * it.quantity }
     return total
 }
 
